@@ -4,15 +4,19 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "tailwindcss -i ./input.css -o ./public/style.css",
-    "watch": "tailwindcss -i ./input.css -o ./public/style.css --watch"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.10",
-    "tailwindcss": "^3.3.6"
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.32",
+    "tailwindcss": "^3.3.7",
+    "vite": "^5.0.10"
   },
   "dependencies": {
     "flowbite": "^2.2.1"
