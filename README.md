@@ -1,15 +1,19 @@
 # how to setup a tailwindscss project with vite
 
 go to a new folder for the project run this command - choose 'vanilla'
+
 ``npm create vite@latest``
 
+
+
 run these commands
+
 ``npm install -D tailwindcss postcss autoprefixer
 npx tailwindcss init``
 
 # change the postcss.config.js & tailwind.config.js to .cjs
-postcss.config.cjs
-tailwind.config.cjs
+`postcss.config.cjs
+tailwind.config.cjs`
 
 # add this in your postcss.config.cjs
 module.exports = {
