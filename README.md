@@ -1,7 +1,9 @@
-# go to a new folder for the project run this command - choose 'vanilla'
+# how to setup a tailwindscss project with vite
+
+#### go to a new folder for the project run this command - choose 'vanilla'
 npm create vite@latest
 
-# run these commands
+#### run these commands
 npm install -D tailwindcss postcss autoprefixer
 npx tailwindcss init
 
