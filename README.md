@@ -30,6 +30,7 @@ module.exports = {
 
 update the contents to be scanned in your tailwind.config.cjs
 because index.html stays in root/ the path to scan is ./ other ressource go to public/
+
 ```
 /** @type {import('tailwindcss').Config} */
 module.exports = {
