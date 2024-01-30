@@ -65,16 +65,15 @@ Run your build process with:
  or whatever command is configured in your package.json file.
 
 
-additional package for layout 
-
-https://tailwindcss.com/docs/typography-plugin
+additional package for layout <br>
+https://tailwindcss.com/docs/typography-plugin <br>
 
 `npm install -D @tailwindcss/typography`
 
 
 after installing put the plugin and path in your tailwind.config.cjs file
+
 ```
-...
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -88,11 +87,11 @@ module.exports = {
     require('@tailwindcss/typography')
     ],
 }
-...
 ```
 
 
 also clean your main.js file and put only these imports
+
 
 ```
 import '@tailwindcss/typography';
