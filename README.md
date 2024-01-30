@@ -8,8 +8,7 @@ go to a new folder for the project run this command - choose 'vanilla'
 run these commands
 
 `npm install -D tailwindcss postcss autoprefixer`
-
-npx tailwindcss init
+`npx tailwindcss init`
 
 change the postcss.config.js & tailwind.config.js to .cjs
 `postcss.config.cjs
