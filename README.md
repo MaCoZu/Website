@@ -18,7 +18,8 @@ change the postcss.config.js & tailwind.config.js to .cjs
 `tailwind.config.cjs`
 
 add this in your postcss.config.cjs
-```module.exports = {
+```shell
+module.exports = {
   plugins: {
     tailwindcss: {},
     autoprefixer: {},
