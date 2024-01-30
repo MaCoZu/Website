@@ -18,12 +18,12 @@ change the postcss.config.js & tailwind.config.js to .cjs
 `tailwind.config.cjs`
 
 add this in your postcss.config.cjs
-`module.exports = {
+```module.exports = {
   plugins: {
     tailwindcss: {},
     autoprefixer: {},
   }
-}`
+}```
 
 
 update the contents to be scanned in your tailwind.config.cjs
