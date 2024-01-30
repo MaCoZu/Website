@@ -30,6 +30,7 @@ module.exports = {
 
 update the contents to be scanned in your tailwind.config.cjs
 because index.html stays in root/ the path to scan is ./ other ressource go to public/
+```
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -41,18 +42,23 @@ module.exports = {
   },
   plugins: [ ],
 }
+```
 
 delete everthing in the main.css and replace with the following
+```
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+```
 
 
 link the .css file in your index.html 
-<link rel="stylesheet" href="main.css" />
+`<link rel="stylesheet" href="main.css" />`
 
-Run your build process with npm run dev or whatever command is configured in your package.json file.
-npm run dev
+Run your build process with:
+
+ `npm run dev` 
+ or whatever command is configured in your package.json file.
 
 
 additional package for layout 
