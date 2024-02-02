@@ -1,7 +1,7 @@
-# how to setup a tailwindscss project with vite
+# how to setup a tailwindscss project with vite and deploy on github pages
 
 
-##  vite and tailwindscss setup
+## vite and tailwindscss setup
 go to a new folder for the project run this command - choose `'vanilla'`
 
 `npm create vite@latest`
@@ -66,7 +66,7 @@ Run your build process with:
 
  or whatever command is configured in your package.json file.
 
-##  additional packages
+## additional packages
 additional package for layout <br>
 https://tailwindcss.com/docs/typography-plugin <br>
 
@@ -131,7 +131,7 @@ export default {
 ```
 
 
-##  compile
+## compile
 compile the project with this command
 
 `npm run build`
@@ -157,7 +157,7 @@ check the `tailwind.config.cjs` file if all folders that need to be scanned are 
 also check `main.js` if you imported the `main.css`
 
 
-##  deploy to git hub pages 
+## deploy to git hub pages 
 If you build your page in a seperate repo now create a github page repo like this:
 
 https://pages.github.com/
