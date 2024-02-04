@@ -1,7 +1,8 @@
-# how to setup a tailwindscss project with vite and deploy on github pages
+# how to setup a tailwindscss project 
+## with vite and deploy on github pages
 
 
-## vite and tailwindscss setup
+### vite and tailwindscss setup
 go to a new folder for the project run this command - choose `'vanilla'`
 
 `npm create vite@latest`
@@ -57,16 +58,29 @@ delete everthing in the main.css and replace with the following
 
 
 link the .css file in your index.html 
-
 `<link rel="stylesheet" href="main.css" />`
+
+
+
+### Build your website
+- start with a simple index.html 
+- explore tailwindscss: https://tailwindcss.com/docs/installation
+- copy/paste some ready made components into your website: https://merakiui.com/components
+- add interactivity with  javascript: https://alpinejs.dev/
+
 
 Run your build process with:
 
  `npm run dev` 
 
- or whatever command is configured in your package.json file.
+or whatever command is configured in your package.json file.<br>
+this should open the index page and live update your changes on the html code<br>
 
-## additional packages
+you may wanna check out the '**Five Server**' add-on for VSCode to if the live update does not work for you
+
+
+
+### additional packages
 additional package for layout <br>
 https://tailwindcss.com/docs/typography-plugin <br>
 
@@ -131,7 +145,7 @@ export default {
 ```
 
 
-## compile
+### compile
 compile the project with this command
 
 `npm run build`
@@ -147,17 +161,21 @@ make sure to set the right releative path by putting a `./` in front `src="./...
   <link rel="stylesheet" crossorigin href="./assets/index-NwK-2QfP.css">
 ```
 
+### update all links
+the compile process throws all the `.html` files in the main folder dist/ <br>
+thus update the links in the dist/ folder before they may have looked like this <br>
+`<a href="public/privacy_policy.html">`
+change them according to the file structure in the dist/ folder <br>
 
-you can now have a look at the compiled project with
-
-`npm run preview`
+### open the compiled website
+open the `index.html` with right click open with Five Server 
 
 if something is not working check the `./` from the last point <br>
 check the `tailwind.config.cjs` file if all folders that need to be scanned are in the content:[...] <br>
 also check `main.js` if you imported the `main.css`
 
 
-## deploy to git hub pages 
+### deploy to git hub pages 
 If you build your page in a seperate repo now create a github page repo like this:
 
 https://pages.github.com/
