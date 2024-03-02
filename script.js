@@ -61,6 +61,13 @@ document.getElementById('font-select').addEventListener('click', function () {
 
     // Update data-font attribute for tooltip
     document.getElementById('font-select').setAttribute('data-font', getFontDisplayName(fontName));
+
+    // Change font color to black if light mode is active
+    if (!isDarkMode()) {
+        document.getElementById('font-select').style.color = '#FFFFFF';
+    } else {
+        document.getElementById('font-select').style.color = '#000000'; // Reset to default color if dark mode is active
+    }
 });
 
 
