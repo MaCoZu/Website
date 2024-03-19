@@ -47,7 +47,7 @@ document.getElementById("chevron-down").addEventListener('click', function () {
 
 
 //  font cycler 
-const fonts = ['font-roboto', 'font-merri', 'font-pop', 'font-lora', 'font-mserrat']; // Array of font classes
+const fonts = ['font-roboto', 'font-pop', 'font-signika', 'font-merri',  'font-lora', 'font-ledger']; // Array of font classes
 let currentFontIndex = 0; // Start from the first font
 
 document.getElementById('font-select').addEventListener('click', function () {
@@ -82,11 +82,11 @@ function getFontDisplayName(fontClass) {
             return 'Poppins';
         case 'font-lora':
             return 'Lora';
-        case 'font-mserrat':
-            return 'Montserrat';
+        case 'font-ledger':
+            return 'Ledger';
+        case 'font-signika':
+            return 'Signika';
         default:
             return 'Unknown';
     }
 }
-
-

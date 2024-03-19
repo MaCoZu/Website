@@ -7,7 +7,7 @@
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
     <!-- Favicon -->
-    <link rel="icon" href="img/logo/logo1.svg" type="image/x-icon" />
+    <link rel="icon" href="./img/logo/logo1.svg" type="image/x-icon" />
 
     <style>
         [x-cloak] {
@@ -138,9 +138,9 @@
 
                     <h3 class="text-left">Profession:</h3>
                     <p>
+                        Economics <br>
                         Business Analytics <br>
                         Data Science <br>
-                        Data Journalism
                     </p>
                 </div>
 
@@ -148,49 +148,102 @@
                     <h3 class="" id="verantwortlicher">Email:</h3>
                     <a href="mailto:marcozausch@posteo.de">marcozausch@posteo.de</a>
 
-                    <h3 class="" id="verantwortlicher">Phone:</h3>
+                    <h3 class="" id="phone">
+                        <span class="mr-2 icon-[fa6-solid--phone] fill-current w-7 h-7 text-gray-500 dark:text-gray-300 "></span>
+                        <span class="mr-2  icon-[fa6-brands--whatsapp] fill-current w-7 h-7 text-gray-500 dark:text-gray-300 "></span>
+                        <span class="mr-2  icon-[fa6-brands--telegram] fill-current w-7 h-7 text-gray-500 dark:text-gray-300 "></span>
+                        <span class="icon-[fa6-brands--signal-messenger] fill-current w-7 h-7 text-gray-500 dark:text-gray-300 "></span></h3>
+
                     <a href="mailto:marcozausch@posteo.de">+49 1573 6896 555</a>
                 </div>
             </div>
         </article>
     </main>
 
+    <!-- divider  -->
+    <hr class="mx-20 border-gray-200 dark:border-gray-700">
+
     <!-- footer  -->
-    <div id="footer" class="mx-20 mt-40 border-t-2 dark:border-y-gray-200">
-        <div class="max-w-screen-xl mx-auto flex-wrap flex justify-between">
+    <div id="footer" class="mx-20">
+        <div class="flex justify-between items-center">
+
+            <!-- Logo and Name  -->
+            <div class="w-1/4">
+                <div class="flex justify-between items-center">
+                    <div class="py-5 flex gap-3 items-center">
+                        <a href="index.html">
+                            <img id="logo2" class="h-16 fill-current dark:filter-white" src="./img/logo/logo5.svg"
+                                alt="">
+                            <div class="">
+                                <p
+                                    class="pb-3 text-lg font-merri font-semibold tracking-widest uppercase rounded-lg focus:outline-none focus:shadow-outline">
+                                    Marco</p>
+                                <p
+                                    class="text-lg font-merri font-semibold tracking-widest uppercase rounded-lg focus:outline-none focus:shadow-outline">
+                                    Zausch</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="w-3/4 flex justify-between items-start">
+            <!-- CONTACT ME  -->
+            <div class="p-5">
+                <div class="text-sm uppercase text-gray-500 dark:text-gray-400 font-medium">Contact Me</div>
+                <a class="my-3 flex items-center gap-3" href="/#">
+                    <span class="icon-[fa6-brands--whatsapp] fill-current w-5 h-5 text-gray-500 dark:text-gray-300 "></span>
+                    <span class="icon-[fa6-brands--telegram] fill-current w-5 h-5 text-gray-500 dark:text-gray-300 "></span>
+                    <span class="icon-[fa6-brands--signal-messenger] fill-current w-5 h-5 text-gray-500 dark:text-gray-300 "></span>
+                     +49 1573 6896 555 </a>
+                <a class="flex items-center gap-3 my-3 hover:text-fuchsia-600 dark:hover:text-fuchsia-400"
+                    href="mailto:marcozausch@posteo.de"><span
+                    class="icon-[fa6-solid--envelope] fill-current w-5 h-5 text-gray-500 dark:text-gray-300 hover:text-fuchsia-600 dark:hover:text-fuchsia-400"></span> marcozausch@posteo.de</a>
+            </div>
+
+            <!-- WORK  -->
+            <div class="p-5">
+                <div class="text-sm uppercase text-gray-500 dark:text-gray-400 font-medium">Work</div>
+
+                <p class="my-3 flex items-center gap-3">
+                    <a href="https://www.linkedin.com/in/marcozausch" aria-label="LinkedIn">
+                        <span
+                            class="icon-[fa6-brands--linkedin] fill-current w-5 h-5 text-gray-500 dark:text-gray-300 hover:text-fuchsia-600 dark:hover:text-fuchsia-400"></span>
+                    </a>
+                    <a class="block hover:text-fuchsia-600 dark:hover:text-fuchsia-400"
+                        href="https://www.linkedin.com/in/marcozausch">Linked In</a>
+                </p>
+
+                <p class="my-3 flex items-center gap-3">
+                    <a href="https://github.com/MaCoZu" aria-label="Github">
+                        <span
+                            class="icon-[fa6-brands--github] fill-current w-5 h-5 text-gray-500 dark:text-gray-300 hover:text-fuchsia-600 dark:hover:text-fuchsia-400"></span>
+                    </a>
+                    <a class="block hover:text-fuchsia-600 dark:hover:text-fuchsia-400"
+                        href="https://github.com/MaCoZu">Github
+                </p>
+            </div>
+
+            <!-- RESSOURCES -->
+            <div class="p-5">
+                <div class="text-sm uppercase text-gray-500 dark:text-gray-400 font-medium">Resources</div>
+                <a class="my-3 block hover:text-fuchsia-600 dark:hover:text-fuchsia-400" href="/#">Statistics </a>
+                <a class="my-3 block hover:text-fuchsia-600 dark:hover:text-fuchsia-400" href="/#">Tutorials </a>
+            </div>
+
+            <!-- LEGAL  -->
             <div class="p-5">
                 <div class="text-sm uppercase font-medium text-gray-500 dark:text-gray-400 ">Legal</div>
                 <a class="my-3 block hover:text-fuchsia-600 dark:hover:text-fuchsia-400"
-                    href="./impressum.html">Impressum <span class="text-teal-600 text-xs p-1"></span>
+                    href="./impressum.html">Impressum
                 </a>
                 <a class="my-3 block hover:text-fuchsia-600 dark:hover:text-fuchsia-400"
-                    href="./privacypolicy.html">Privacy Policy <span class="text-teal-600 text-xs p-1"></span>
-                </a>
-
-            </div>
-            <div class="p-5">
-                <div class="text-sm uppercase text-gray-500 dark:text-gray-400 font-medium">Resources</div>
-
-                <a class="my-3 block hover:text-fuchsia-600 dark:hover:text-fuchsia-400" href="/#">Statistics <span
-                        class="text-teal-600 text-xs p-1"></span>
-                </a>
-                <a class="my-3 block hover:text-fuchsia-600 dark:hover:text-fuchsia-400" href="/#">Tutorials <span
-                        class="text-teal-600 text-xs p-1"></span>
+                    href="./privacypolicy.html">Privacy Policy
                 </a>
             </div>
-            <div class="p-5">
-                <div class="text-sm uppercase text-gray-500 dark:text-gray-400 font-medium">Contact Me</div>
-
-                <a class="my-3 block" href="/#">Phone: +49 1573 6896 555
-                    <span class="text-teal-600 text-xs p-1"></span>
-                </a>
-
-                <a class="my-3 block" href="/#">Email: marcozausch@posteo.de
-                    <span class="text-teal-600 text-xs p-1"></span>
-                </a>
-            </div>
-
         </div>
+
     </div>
 
     <script type="module" src="../main.js"></script>
