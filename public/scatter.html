@@ -196,7 +196,7 @@
             <!-- terminology  -->
             <section>
                 <h2 id="terminology">Terminology</h2>
-                <p>Mathematics is a language in itself, and not always an unambiguous one. Different authors use
+                <p>Mathematics is a language in itself, it maybe precise but not always clear. Different authors use
                     different symbols, the same thing can have many synonyms, or vice versa, one word can have
                     different meanings. I'll do my best to keep the math to a minimum and extract the essentials,
                     otherwise I'll choose the most commonly used symbols, clarify any synonyms/homonyms and such.
@@ -326,27 +326,26 @@
             <!-- scatterplot  -->
             <section>
                 <h2 id="scatterplot">The Scatterplot</h2>
-                <p>In the beginning there was the scatterplot. When Sir Francis Galton (1822 - 1911) plotted the
-                    height of parents against the height of their offspring, he noticed that taller parents where
-                    tended to have taller children and shorter parents tended to have shorter children in general.
-                    There was a correlation between the height of the children and their parents. But he also
-                    noticed that the children of parents with extreme characteristics tended to move closer to the
-                    average over time. Galton called this phenomenon “regression toward mediocrity”. </p>
-                <p>Looking at Galton's data we can observe “regression toward mediocrity” as a correlation that is
-                    positive but less than $1:1$ since tall parents have slightly shorter children and short parents
-                    have taller children on the average. </p>
-
-
+                <p>In the beginning there was the scatterplot. When Sir Francis Galton (1822 - 1911) plotted the height
+                    of parents against the height of their adult children, he noticed the tendency for tall (or short)
+                    parents to have tall (or short) children, but the children were not as tall (or short), on average,
+                    as their parents. So while there was correlation between the height of children and their parents,
+                    children also balanced out the extreme characteristics of the parents. Galton called this phenomenon
+                    “regression toward mediocrity”.
+                </p>
+                <p>
+                Looking at Galton's data we can see how the average heights of adult
+                children tend to “regress” to the mean of the population. The 45° Line suggests a $1:1$ association
+                in the height of children and parents, in contrast the Regression Line is flatter reflecting the
+                regress of extremes.</p>
                 <figure class="flex flex-col justify-center items-center">
                     <div class="w-[80%] hover:scale-125">
-                        <img src="img/scatter_reg/galton2.png" alt="Correlation coefficients">
+                        <img src="img/scatter_reg/galton1.png" alt="Correlation coefficients">
                     </div>
                     <figcaption
                         class="mx-5 mt-10 font-sm tracking-tight leading-2 text-neutral-600 dark:text-neutral-400">
-                        Galton's data suggests that children are, on average, taller than or at least the same height as
-                        their parents. This relationship is depicted by the 45° line in violet. The regression line we
-                        will calculate indicates a weaker relationship between the average height of parents and their
-                        offspring.
+                        The regression line indicates a weaker than $1:1$ relationship between the average 
+                        height of parents and their offspring.
                     </figcaption>
                 </figure>
 
@@ -360,10 +359,7 @@
                     mean. <br />
                     2) Extreme observations are likely to be followed by less extreme ones. (On average,
                     extremes do not survive)</p>
-                <p>From a simple scatter plot alone we can read many things. We see the range of values, the
-                    spread of observations, the single and joint mean of the variables, and the characteristics
-                    of the relationship between them: direction, strength (tight or dispersed), and degree
-                    (constant, linear, quadratic, etc.).</p>
+                <p>From a simple scatter plot alone we can read many things. We see the range of values, the spread of observations, the single and joint mean of the variables, and maybe even some characteristics of the relationship between them like direction, strength (tight or dispersed data points), and degree (linear, non-linear).</p>
                 <p>Let us quickly determine these things quickly to understand how the regression line is
                     derived from them. </p>
             </section>
@@ -759,35 +755,29 @@
                     weight (pounds) from height (inches), we would say for every one-inch increase in height our
                     model suggests a weight increases by $\beta_1$ pounds. </p>
 
-                <div class="">
-                    <div>
-                        <img class="max-w-60 hover:scale-125" src="img/scatter_reg/weight-height_intercept.png"
-                            alt="Interpretation Intercept"
-                            style="padding: 0 10px 5px 0; float:right; margin-left:30px ;">
-                    </div>
-                    <div>
-                        <p> The intercept $\beta_0$ is more obscure. It represents the value of the response
-                            variable
-                            when
-                            the explanatory variable is zero. In the example of height and weight $\beta_0$ represents
-                            the
-                            weight of someone of that zero inches tall. The regression equation of the data to the right
-                            is
-                            $\hat{y}=-106+3.43x$, this says a person of zero inches weights $-106$ pounds, a very
-                            peculiar
-                            person indeed. Obviously the intercept does not make always sense.</p>
-                        <p>When we talked about predictions in the terminology chapter, I advised against straying too
-                            far from the available data to make predictions outside of the range of values you actually
-                            observed. Trying to find the weight of a person who is zero inches tall should explain why
-                            this it is not a good idea. The intercept is mostly a mathematical tool for in drawing a
-                            line. Estimates of $\hat{y}$ are most plausible around the center of your observations,
-                            beyond the range of observed values the meaningfulness of the estimates diminishes quickly.
-                        </p>
-                    </div>
-                        <p>Looking again at the concrete example of $\hat{y}=-106+3.43x$, we can say that with each
-                            additional inch of height, a person's weight increases by $3.43$ pounds, on average. As long
-                            as we stay close to our observed range of values for the explanatory variable, in this case
-                            between $[63.43, 73.90]$.</p>
+                <div>
+                    <img src="img/scatter_reg/weight-height_intercept.png" alt="Interpretation Intercept"
+                        style="max-width:300px; float:right; margin:16px 0 4px 20px;">
+                </div>
+                <div>
+                    <p>The intercept $\beta_0$ is more obscure. It represents the value of the response variable
+                        when the explanatory variable is zero. In the height and weight example, $\beta_0$
+                        represents the weight of someone who is zero inches tall. The regression equation in the
+                        graph on the right is $\hat{y}=-106+3.43x$, from the formula alone one would say "a person
+                        of zero inches has a weight of $-106$ pounds", a very peculiar person indeed. Obviously, the
+                        intercept makes no sense if our explanatory variable is unreasonable.</p>
+                    <p>When we talked about predictions in the terminology chapter, I advised against straying too
+                        far from the available data to make predictions outside of the range of values you actually
+                        observed. Trying to find the weight of a person who is zero inches tall should explain why
+                        this it is not a good idea. The intercept is mostly a mathematical tool for drawing a
+                        line. Estimates of $\hat{y}$ are most plausible around the center of your observations,
+                        beyond the range of observed values the meaningfulness of the estimates diminishes quickly.
+                    </p>
+                </div>
+                <p>Looking again at the concrete example of $\hat{y}=-106+3.43x$, we can say that with each
+                    additional inch of height, a person's weight increases by $3.43$ pounds, on average. As long as
+                    we stay close to our observed range of values for the explanatory variable, in this case between
+                    $63.43$ and $73.90$ inches.</p>
             </section>
 
             <!-- summary  -->
@@ -799,7 +789,8 @@
                     <li>A simple linear regression quantifies the effect of an explanatory variable on a response
                         variable, assuming a linear relationship between them.</li>
                     <li>The problem can be stated as an optimization problem, with the goal of minimizing the sum of
-                        squared errors (SSE) between true labels and estimates. $$\min_{\beta_{0}, \,\beta_1} \,(SSE) =
+                        squared errors $(SSE)$ between true labels and estimates. $$\min_{\beta_{0}, \,\beta_1} \,(SSE)
+                        =
                         \min_{\beta_{0}, \,\beta_1} \left\{\sum (y_{i} - \hat{y}_i)^2 \right\} = \min_{\beta_{0},
                         \,\beta_1} \left\{\sum[y_i-(\hat\beta_0+\hat\beta_{1}x_i)]^2\right\}$$
                     </li>
@@ -862,14 +853,6 @@
             <!-- CONTACT ME  -->
             <div class="p-5">
                 <div class="text-sm uppercase text-gray-500 dark:text-gray-400 font-medium">Contact Me</div>
-                <a class="my-3 flex items-center gap-3" href="/#">
-                    <span
-                        class="icon-[fa6-brands--whatsapp] fill-current w-5 h-5 text-gray-500 dark:text-gray-300 "></span>
-                    <span
-                        class="icon-[fa6-brands--telegram] fill-current w-5 h-5 text-gray-500 dark:text-gray-300 "></span>
-                    <span
-                        class="icon-[fa6-brands--signal-messenger] fill-current w-5 h-5 text-gray-500 dark:text-gray-300 "></span>
-                    +49 1573 6896 555 </a>
                 <a class="flex items-center gap-3 my-3 hover:text-fuchsia-600 dark:hover:text-fuchsia-400"
                     href="mailto:marcozausch@posteo.de"><span
                         class="icon-[fa6-solid--envelope] fill-current w-5 h-5 text-gray-500 dark:text-gray-300 hover:text-fuchsia-600 dark:hover:text-fuchsia-400"></span>
