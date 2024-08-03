@@ -1,9 +1,28 @@
-# how to setup a tailwindscss project 
+# how to setup a tailwindscss project
 ## with vite and deploy on github pages
 
 
+### install node if you haven't already <br>
+with `node -v` you can check the node version or if you have node installed, `npm` is the node package manager which we need
+
+```
+sudo apt update
+sudo apt install nodejs
+node -v
+sudo apt install npm
+```
+
+update node if that doesn't suffice, n is a package that manages node versions
+```
+sudo npm install -g n
+sudo n lts
+sudo n latest
+n prune
+```
+
 ### vite and tailwindscss setup
-go to a new folder for the project run this command - choose `'vanilla'`
+go to a new folder for the project run this command - choose `'vanilla'` and `Java Script
+`
 
 `npm create vite@latest`
 
@@ -57,13 +76,13 @@ delete everthing in the main.css and replace with the following
 ```
 
 
-link the .css file in your index.html 
+link the .css file in your index.html
 `<link rel="stylesheet" href="main.css" />`
 
 
 
 ### Build your website
-- start with a simple index.html 
+- start with a simple index.html
 - explore tailwindscss: https://tailwindcss.com/docs/installation
 - copy/paste some ready made components into your website: https://merakiui.com/components
 - add interactivity with  javascript: https://alpinejs.dev/
@@ -71,7 +90,7 @@ link the .css file in your index.html
 
 Run your build process with:
 
- `npm run dev` 
+ `npm run dev`
 
 or whatever command is configured in your package.json file.<br>
 this should open the index page and live update your changes on the html code<br>
@@ -83,28 +102,43 @@ you may wanna check out the '**Five Server**' add-on for VSCode to if the live u
 ### additional packages
 additional package for layout <br>
 https://tailwindcss.com/docs/typography-plugin <br>
-
 `npm install -D @tailwindcss/typography`
+
+package for icons<br>
+`npm i -D @iconify/tailwind`
+
+you need to install the icons itself too:<br>
+`npm install --save @iconify/json`
 
 
 after installing put the plugin and path in your tailwind.config.cjs file
 
 ```
+const { addDynamicIconSelectors } = require('@iconify/tailwind');
+
 /** @type {import('tailwindcss').Config} */
-module.exports = {
+
+export default {
   content: [
-    "./*.{html,js}",
-    "./public/**/*.{html,js}",
+    "./*.{html, js}",
+    "./public/*",
+
   ],
   theme: {
     extend: {},
   },
   plugins: [
-    require('@tailwindcss/typography')
-    ],
+    require('@tailwindcss/typography'),
+    addDynamicIconSelectors(),
+  ],
 }
 ```
 
+find your icons here:<br>
+https://icon-sets.iconify.design/
+
+choose the tailwindcss way of adding an icon: <br>
+`<span class="icon-[solar--arrow-up-bold-duotone]"></span>`
 
 also clean your main.js file and put only these imports
 
@@ -133,7 +167,7 @@ export default {
   content: [
     "./*.{html,js}",
     "./public/*",
-  
+
   ],
   theme: {
     extend: {},
@@ -168,14 +202,14 @@ thus update the links in the dist/ folder before they may have looked like this 
 change them according to the file structure in the dist/ folder <br>
 
 ### open the compiled website
-open the `index.html` with right click open with Five Server 
+open the `index.html` with right click open with Five Server
 
 if something is not working check the `./` from the last point <br>
 check the `tailwind.config.cjs` file if all folders that need to be scanned are in the content:[...] <br>
 also check `main.js` if you imported the `main.css`
 
 
-### deploy to git hub pages 
+### deploy to git hub pages
 If you build your page in a seperate repo now create a github page repo like this:
 
 https://pages.github.com/
@@ -188,4 +222,3 @@ rename the dist/ folder from before into docs/ and copy it into the main branch 
 your page should be online shortly after under
 
 https://your_github_name.github.io
-
